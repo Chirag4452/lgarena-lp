@@ -30,8 +30,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-600/90 via-red-700/80 to-gray-900/95 z-10"></div>
+      {/* Gradient Overlays removed per request */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-20"></div>
 
       {/* Hero Content */}
@@ -41,14 +40,11 @@ const Hero = () => {
             
             {/* Main Headlines */}
             <div className="space-y-4">
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium text-white/90 mb-6">
-                <span className="w-2 h-2 bg-red-400 rounded-full mr-2 animate-pulse"></span>
-                Premium Multi-Sport Complex
-              </div>
+              
               
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight">
                 Welcome to{' '}
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-red-100">
+                <span className="block text-white">
                   LG87 Play Arena
                 </span>
               </h1>
@@ -100,59 +96,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Operating Hours Card */}
-      <div className="absolute bottom-8 left-4 md:left-8 z-40 hidden sm:block">
-        <div className="bg-white/95 backdrop-blur-md rounded-xl p-4 md:p-6 shadow-2xl border border-white/20 max-w-xs">
-          <div className="flex items-center mb-3 md:mb-4">
-            <div className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-            <h3 className="font-bold text-gray-800 text-sm md:text-base">Operating Hours</h3>
-          </div>
-          
-          <div className="space-y-2 text-xs md:text-sm text-gray-700">
-            <div className="flex justify-between">
-              <span className="font-medium">Mon - Fri:</span>
-              <span className="text-xs md:text-sm">5:00 AM - 11:00 PM</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="font-medium">Weekends:</span>
-              <span className="text-xs md:text-sm">6:00 AM - 10:00 PM</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="font-medium">Holidays:</span>
-              <span className="text-xs md:text-sm">8:00 AM - 8:00 PM</span>
-            </div>
-          </div>
-          
-          <div className="mt-3 md:mt-4 pt-2 md:pt-3 border-t border-gray-200">
-            <p className="text-xs text-gray-500">
-              <span className="font-semibold text-red-600">Open Now</span> • Closes 11:00 PM
-            </p>
-          </div>
-        </div>
-      </div>
+      
 
-      {/* Mobile Operating Hours Banner */}
-      <div className="absolute bottom-4 left-4 right-4 z-40 sm:hidden">
-        <div className="bg-white/95 backdrop-blur-md rounded-lg px-4 py-3 shadow-xl border border-white/20">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-              <span className="font-semibold text-gray-800 text-sm">Open Now</span>
-              <span className="text-gray-600 text-xs ml-2">• Closes 11:00 PM</span>
-            </div>
-            <button className="text-red-600 text-xs font-medium active:text-red-700 min-h-[32px] px-3 py-1 rounded-md active:bg-red-50 transition-colors">
-              View Hours
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
 
       {/* Decorative Elements */}
       <div className="absolute top-20 right-20 w-32 h-32 bg-red-500/20 rounded-full blur-3xl z-20"></div>

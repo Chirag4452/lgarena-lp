@@ -26,7 +26,7 @@ const Footer = () => {
   }));
 
   return (
-    <footer className="bg-secondary-800 text-white">
+    <footer className="bg-neutral-900 text-white">
       <div className="container-custom">
         {/* Main Footer Content */}
         <div className="pt-12 pb-8">
@@ -156,32 +156,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-700 py-8">
-          <div className="text-center mb-6">
-            <h3 className="font-semibold text-lg mb-2">Stay Updated</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Subscribe to our newsletter for the latest updates, events, and special offers.
-            </p>
-          </div>
-          
-          <div className="max-w-md mx-auto">
-            <form className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                required
-                className="flex-1 px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm"
-              />
-              <button
-                type="submit"
-                className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-200 text-sm"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
+        
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 py-6">

@@ -669,11 +669,11 @@
      DARK MODE STYLES
      ======================================== */
 
-  .dark .card {
+.dark .card {
     @apply bg-neutral-800 border-neutral-700;
   }
 
-  .dark .form-input {
+.dark .form-input {
     @apply bg-neutral-800 border-neutral-700 text-white;
   }
 
@@ -681,9 +681,18 @@
     @apply text-neutral-300;
   }
 
-  .dark .btn-secondary {
+.dark .btn-secondary {
     @apply bg-neutral-800 text-primary-400 border-primary-400 hover:bg-neutral-700;
   }
+
+/* Ensure footer has proper contrast in light mode */
+footer {
+  @apply bg-neutral-900 text-white;
+}
+
+.dark footer {
+  @apply bg-neutral-900 text-white;
+}
 }
 
 /* ========================================
