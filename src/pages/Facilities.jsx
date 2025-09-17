@@ -141,15 +141,15 @@ const Facilities = () => {
                     <div className="space-y-1 text-sm">
                       <div className="flex justify-between">
                         <span className="text-secondary-600">Hourly:</span>
-                        <span className="font-medium">${facility.pricing.hourly}</span>
+                        <span className="font-medium">₹{facility.pricing.hourly}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-secondary-600">Daily:</span>
-                        <span className="font-medium">${facility.pricing.daily}</span>
+                        <span className="font-medium">₹{facility.pricing.daily}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-secondary-600">Monthly:</span>
-                        <span className="font-medium">${facility.pricing.monthly}</span>
+                        <span className="font-medium">₹{facility.pricing.monthly}</span>
                       </div>
                     </div>
                   </div>

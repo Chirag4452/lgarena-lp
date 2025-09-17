@@ -96,7 +96,7 @@ const Facilities = () => {
 
                 {/* Price badge */}
                 <div className="absolute top-4 left-4 bg-red-500/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-semibold text-white">
-                  From ${facility.pricing.hourly}/hr
+                  From ₹{facility.pricing.hourly}/hr
                 </div>
               </div>
 
@@ -207,7 +207,7 @@ const Facilities = () => {
                     <div className="text-red-200 text-sm">Capacity</div>
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                    <div className="text-2xl font-bold text-white">${selected_facility.pricing.hourly}</div>
+                    <div className="text-2xl font-bold text-white">₹{selected_facility.pricing.hourly}</div>
                     <div className="text-red-200 text-sm">Per Hour</div>
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
@@ -288,15 +288,15 @@ const Facilities = () => {
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Pricing Options</h4>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center p-4 bg-gradient-to-br from-red-50 to-red-100 rounded-xl">
-                    <div className="text-2xl font-bold text-red-600">${selected_facility.pricing.hourly}</div>
+                    <div className="text-2xl font-bold text-red-600">₹{selected_facility.pricing.hourly}</div>
                     <div className="text-red-700 font-medium">Per Hour</div>
                   </div>
                   <div className="text-center p-4 bg-gradient-to-br from-red-50 to-red-100 rounded-xl">
-                    <div className="text-2xl font-bold text-red-600">${selected_facility.pricing.daily}</div>
+                    <div className="text-2xl font-bold text-red-600">₹{selected_facility.pricing.daily}</div>
                     <div className="text-red-700 font-medium">Daily Rate</div>
                   </div>
                   <div className="text-center p-4 bg-gradient-to-br from-red-50 to-red-100 rounded-xl">
-                    <div className="text-2xl font-bold text-red-600">${selected_facility.pricing.monthly}</div>
+                    <div className="text-2xl font-bold text-red-600">₹{selected_facility.pricing.monthly}</div>
                     <div className="text-red-700 font-medium">Monthly Pass</div>
                   </div>
                 </div>

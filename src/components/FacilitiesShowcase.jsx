@@ -85,7 +85,7 @@ const FacilitiesShowcase = () => {
                   <div className="text-sm">
                     <span className="text-secondary-500">From </span>
                     <span className="font-semibold text-primary-600">
-                      ${facility.pricing.hourly}/hr
+                      ₹{facility.pricing.hourly}/hr
                     </span>
                   </div>
                   <div className="text-sm text-secondary-500">
