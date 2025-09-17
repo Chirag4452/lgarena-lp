@@ -73,6 +73,15 @@ const Header = () => {
                 alt="LG87 Play Arena" 
                 className="h-20 w-auto transition-transform duration-200 group-hover:scale-105"
               />
+              {/* Brand Heading */}
+              <div className="ml-3 leading-tight">
+                <div className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+                  LG87 <span className="text-red-600">Play Arena</span>
+                </div>
+                <div className="text-[11px] sm:text-xs text-gray-500 font-medium">
+                  Multi-Sport Complex
+                </div>
+              </div>
             </div>
           </Link>
 

@@ -213,35 +213,7 @@ const ContactLocation = () => {
               </div>
             </div>
 
-            {/* Social Media Links */}
-            <div>
-              <h4 className="text-lg font-semibold text-secondary-800 mb-4">
-                Follow Us
-              </h4>
-              <div className="flex space-x-4">
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center hover:bg-primary-700 transition-colors"
-                  aria-label="Facebook"
-                >
-                  📘
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center hover:bg-primary-700 transition-colors"
-                  aria-label="Instagram"
-                >
-                  📷
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center hover:bg-primary-700 transition-colors"
-                  aria-label="Twitter"
-                >
-                  🐦
-                </a>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

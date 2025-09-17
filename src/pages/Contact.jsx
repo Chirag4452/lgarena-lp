@@ -137,21 +137,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Emergency Contact */}
-        <div className="mt-12 bg-red-50 border border-red-200 rounded-lg p-6">
-          <div className="flex items-center">
-            <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3">
-              <span className="text-red-600">🚨</span>
-            </div>
-            <div>
-              <h3 className="font-semibold text-red-800">Emergency Contact</h3>
-              <p className="text-red-600 text-sm">
-                For emergencies at our facility, please call 911 immediately. 
-                For urgent facility matters, contact our emergency line: <strong>(555) 123-9911</strong>
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </main>
   );
