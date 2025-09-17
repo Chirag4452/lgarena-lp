@@ -7,6 +7,7 @@ import FacilitiesGrid from './pages/FacilitiesGrid.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import ContactPage from './pages/ContactPage.jsx';
+import DesignSystem from './pages/DesignSystem.jsx';
 
 /**
  * Main App component with routing structure
@@ -56,6 +57,12 @@ function App() {
           <Route 
             path="/contact-page" 
             element={<ContactPage />} 
+          />
+
+          {/* Design System Showcase Route */}
+          <Route 
+            path="/design-system" 
+            element={<DesignSystem />} 
           />
           
           {/* Catch-all route for 404 Not Found */}

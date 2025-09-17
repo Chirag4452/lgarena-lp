@@ -2,56 +2,174 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========================================
+   LG&T PLAY ARENA DESIGN SYSTEM
+   ======================================== */
+
+/* CSS Custom Properties - Design Tokens */
+:root {
+  /* Brand Colors */
+  --color-primary-50: #fef2f2;
+  --color-primary-500: #ef4444;
+  --color-primary-600: #dc2626;
+  --color-primary-700: #b91c1c;
+  
+  /* Neutral Colors */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  
+  /* Status Colors */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  
+  /* Typography */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(239, 68, 68, 0.3);
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
+}
+
+/* Dark Mode Variables */
+.dark {
+  --color-neutral-0: #0f172a;
+  --color-neutral-50: #1e293b;
+  --color-neutral-100: #334155;
+  --color-neutral-200: #475569;
+  --color-neutral-800: #f1f5f9;
+  --color-neutral-900: #f8fafc;
+}
+
 @layer base {
+  /* Base Styles */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
   }
   
   body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    background-color: var(--color-neutral-0);
+    color: var(--color-neutral-900);
+    line-height: 1.5;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Smooth scrolling for all internal links */
-  * {
-    scroll-behavior: smooth;
+  /* Typography Scale */
+  h1, .text-h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+  
+  h2, .text-h2 {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+  }
+  
+  h3, .text-h3 {
+    @apply text-2xl sm:text-3xl font-semibold tracking-tight;
+  }
+  
+  h4, .text-h4 {
+    @apply text-xl sm:text-2xl font-semibold;
+  }
+  
+  h5, .text-h5 {
+    @apply text-lg sm:text-xl font-semibold;
+  }
+  
+  h6, .text-h6 {
+    @apply text-base sm:text-lg font-semibold;
   }
 
-  /* Custom scrollbar */
+  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: var(--color-neutral-100);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #ef4444;
-    border-radius: 3px;
+    background: var(--color-primary-500);
+    border-radius: var(--radius-sm);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #dc2626;
+    background: var(--color-primary-600);
   }
 
-  /* Hero section specific styles */
-  .hero-pattern {
-    background-image: radial-gradient(circle at 25% 25%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
-                      radial-gradient(circle at 75% 75%, rgba(239, 68, 68, 0.1) 0%, transparent 50%);
+  /* Focus Styles */
+  :focus {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
   }
 
-  /* Text gradient animations */
-  @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+  :focus:not(:focus-visible) {
+    outline: none;
   }
 
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
+  /* Selection Styles */
+  ::selection {
+    background-color: var(--color-primary-500);
+    color: white;
   }
 
-  /* Line clamp utilities for text truncation */
+  /* Line Clamp Utilities */
   .line-clamp-1 {
     display: -webkit-box;
     -webkit-line-clamp: 1;
@@ -75,15 +193,292 @@
 }
 
 @layer components {
+  /* ========================================
+     BUTTON SYSTEM
+     ======================================== */
+  
+  /* Base Button */
+  .btn {
+    @apply inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Button Sizes */
+  .btn-xs {
+    @apply px-2 py-1 text-xs rounded-md;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-sm rounded-md;
+  }
+
+  .btn-md {
+    @apply px-4 py-2 text-sm rounded-lg;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-base rounded-lg;
+  }
+
+  .btn-xl {
+    @apply px-8 py-4 text-lg rounded-xl;
+  }
+
+  /* Button Variants */
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply btn btn-lg bg-primary-500 hover:bg-primary-600 active:bg-primary-700 text-white shadow-md hover:shadow-lg focus:ring-primary-500 transform hover:scale-105;
   }
-  
+
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-primary-600 border border-primary-600 font-medium py-2 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply btn btn-lg bg-white hover:bg-neutral-50 text-primary-600 border border-primary-500 hover:border-primary-600 shadow-sm hover:shadow focus:ring-primary-500;
   }
-  
+
+  .btn-outline {
+    @apply btn btn-lg bg-transparent hover:bg-primary-50 text-primary-600 border border-primary-500 hover:border-primary-600 focus:ring-primary-500;
+  }
+
+  .btn-ghost {
+    @apply btn btn-lg bg-transparent hover:bg-primary-50 text-primary-600 focus:ring-primary-500;
+  }
+
+  .btn-success {
+    @apply btn btn-lg bg-success-500 hover:bg-success-600 text-white shadow-md hover:shadow-lg focus:ring-success-500;
+  }
+
+  .btn-warning {
+    @apply btn btn-lg bg-warning-500 hover:bg-warning-600 text-white shadow-md hover:shadow-lg focus:ring-warning-500;
+  }
+
+  .btn-error {
+    @apply btn btn-lg bg-error-500 hover:bg-error-600 text-white shadow-md hover:shadow-lg focus:ring-error-500;
+  }
+
+  /* ========================================
+     CARD SYSTEM
+     ======================================== */
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-neutral-200 overflow-hidden;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer;
+  }
+
+  .card-gradient {
+    @apply card bg-gradient-to-br from-primary-50 to-primary-100 border-primary-200;
+  }
+
+  .card-header {
+    @apply p-6 border-b border-neutral-200;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  .card-footer {
+    @apply p-6 border-t border-neutral-200 bg-neutral-50;
+  }
+
+  /* ========================================
+     FORM SYSTEM
+     ======================================== */
+
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold text-neutral-700;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 border border-neutral-300 rounded-lg bg-neutral-50 focus:bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200 placeholder-neutral-400;
+  }
+
+  .form-textarea {
+    @apply form-input resize-none;
+  }
+
+  .form-select {
+    @apply form-input bg-white cursor-pointer;
+  }
+
+  .form-checkbox {
+    @apply h-4 w-4 text-primary-600 bg-white border-neutral-300 rounded focus:ring-primary-500 focus:ring-2;
+  }
+
+  .form-radio {
+    @apply h-4 w-4 text-primary-600 bg-white border-neutral-300 focus:ring-primary-500 focus:ring-2;
+  }
+
+  .form-error {
+    @apply text-error-600 text-sm mt-1;
+  }
+
+  .form-help {
+    @apply text-neutral-500 text-sm mt-1;
+  }
+
+  /* ========================================
+     LAYOUT SYSTEM
+     ======================================== */
+
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  /* ========================================
+     UTILITY COMPONENTS
+     ======================================== */
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-100 text-primary-800;
+  }
+
+  .badge-success {
+    @apply badge bg-success-100 text-success-800;
+  }
+
+  .badge-warning {
+    @apply badge bg-warning-100 text-warning-800;
+  }
+
+  .badge-error {
+    @apply badge bg-error-100 text-error-800;
+  }
+
+  .alert {
+    @apply p-4 rounded-lg border;
+  }
+
+  .alert-info {
+    @apply alert bg-info-50 border-info-200 text-info-800;
+  }
+
+  .alert-success {
+    @apply alert bg-success-50 border-success-200 text-success-800;
+  }
+
+  .alert-warning {
+    @apply alert bg-warning-50 border-warning-200 text-warning-800;
+  }
+
+  .alert-error {
+    @apply alert bg-error-50 border-error-200 text-error-800;
+  }
+
+  /* ========================================
+     ANIMATION UTILITIES
+     ======================================== */
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* ========================================
+     RESPONSIVE UTILITIES
+     ======================================== */
+
+  .responsive-text {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  .responsive-padding {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+
+  .responsive-margin {
+    @apply m-4 sm:m-6 lg:m-8;
+  }
+
+  /* ========================================
+     DARK MODE STYLES
+     ======================================== */
+
+  .dark .card {
+    @apply bg-neutral-800 border-neutral-700;
+  }
+
+  .dark .form-input {
+    @apply bg-neutral-800 border-neutral-700 text-white;
+  }
+
+  .dark .form-label {
+    @apply text-neutral-300;
+  }
+
+  .dark .btn-secondary {
+    @apply bg-neutral-800 text-primary-400 border-primary-400 hover:bg-neutral-700;
+  }
+}
+
+/* ========================================
+   KEYFRAMES
+   ======================================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(10px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    transform: scale(0.95); 
+    opacity: 0; 
+  }
+  to { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .btn, .card-hover {
+    @apply transform-none shadow-none;
   }
 }
