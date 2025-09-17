@@ -3,6 +3,7 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Facilities from './pages/Facilities.jsx';
+import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 
 /**
@@ -29,6 +30,12 @@ function App() {
           <Route 
             path="/facilities" 
             element={<Facilities />} 
+          />
+          
+          {/* About Page Route */}
+          <Route 
+            path="/about" 
+            element={<About />} 
           />
           
           {/* Contact Page Route */}

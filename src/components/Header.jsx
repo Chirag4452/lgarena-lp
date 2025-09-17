@@ -82,33 +82,79 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {nav_items.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`font-medium transition-colors duration-200 ${
-                  isActivePath(item.path)
-                    ? 'text-primary-600 border-b-2 border-primary-600'
-                    : 'text-secondary-600 hover:text-primary-600'
-                }`}
+          <div className="hidden lg:flex items-center space-x-8">
+            {/* Navigation Links */}
+            <div className="flex items-center space-x-6">
+              {nav_items.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={(e) => handleSmoothScroll(e, item.path)}
+                  className={`font-medium text-sm tracking-wide transition-all duration-200 hover:scale-105 ${
+                    isActivePath(item.path)
+                      ? 'text-red-600 border-b-2 border-red-600 pb-1'
+                      : 'text-gray-700 hover:text-red-600'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* Phone Number */}
+            <div className="flex items-center space-x-2 text-gray-700">
+              <div className="w-5 h-5 flex items-center justify-center">
+                <svg className="w-4 h-4 fill-current text-red-500" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+              </div>
+              <a 
+                href={`tel:${phone_number}`}
+                className="font-semibold text-sm hover:text-red-600 transition-colors duration-200"
               >
-                {item.name}
-              </Link>
-            ))}
-            <button className="btn-primary">
+                {phone_number}
+              </a>
+            </div>
+
+            {/* CTA Button */}
+            <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg">
               Book Now
             </button>
           </div>
 
+          {/* Tablet Navigation (md to lg) */}
+          <div className="hidden md:flex lg:hidden items-center space-x-4">
+            {/* Phone Number */}
+            <a 
+              href={`tel:${phone_number}`}
+              className="text-red-500 font-semibold text-sm hover:text-red-600 transition-colors duration-200"
+            >
+              {phone_number}
+            </a>
+          </div>
+
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-3">
+            {/* Mobile Phone Number */}
+            <a 
+              href={`tel:${phone_number}`}
+              className="text-red-500 text-sm font-semibold"
+            >
+              <div className="flex items-center space-x-1">
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <span className="hidden sm:inline">Call</span>
+              </div>
+            </a>
+
+            {/* Hamburger Menu Button */}
             <button
               onClick={toggleMobileMenu}
-              className="text-secondary-600 hover:text-primary-600 focus:outline-none focus:text-primary-600"
+              className="p-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-red-500 transition-colors duration-200"
               aria-label="Toggle mobile menu"
             >
-              <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <svg className="h-6 w-6 fill-current transform transition-transform duration-200" viewBox="0 0 24 24">
                 {is_mobile_menu_open ? (
                   <path
                     fillRule="evenodd"
@@ -128,24 +174,43 @@ const Header = () => {
 
         {/* Mobile Navigation Menu */}
         {is_mobile_menu_open && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-              {nav_items.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
+          <div className="md:hidden animate-in slide-in-from-top-2 duration-200">
+            <div className="bg-white border-t border-gray-200 shadow-lg">
+              {/* Mobile Navigation Links */}
+              <div className="px-4 py-4 space-y-2">
+                {nav_items.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={(e) => handleSmoothScroll(e, item.path)}
+                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                      isActivePath(item.path)
+                        ? 'text-red-600 bg-red-50 border-l-4 border-red-500'
+                        : 'text-gray-700 hover:text-red-600 hover:bg-gray-50'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Mobile Contact Info */}
+              <div className="px-4 py-3 bg-gray-50 border-t border-gray-100">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-medium text-gray-600">Contact Us</span>
+                  <a 
+                    href={`tel:${phone_number}`}
+                    className="text-red-500 font-semibold text-sm hover:text-red-600 transition-colors duration-200"
+                  >
+                    {phone_number}
+                  </a>
+                </div>
+                
+                {/* Mobile CTA Button */}
+                <button 
                   onClick={closeMobileMenu}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    isActivePath(item.path)
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-secondary-600 hover:text-primary-600 hover:bg-gray-50'
-                  }`}
+                  className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 shadow-md"
                 >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="px-3 pt-2">
-                <button className="btn-primary w-full">
                   Book Now
                 </button>
               </div>
