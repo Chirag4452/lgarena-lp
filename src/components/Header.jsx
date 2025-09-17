@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 /**
  * Main navigation header component with responsive design
- * Features LG&T Play Arena branding, mobile hamburger menu, and prominent phone display
+ * Features LG87 Play Arena branding, mobile hamburger menu, and prominent phone display
  */
 const Header = () => {
   const [is_mobile_menu_open, setIsMobileMenuOpen] = useState(false);
@@ -64,20 +64,15 @@ const Header = () => {
     <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
       <nav className="container-custom">
         <div className="flex justify-between items-center h-20">
-          {/* Logo - LG&T Play Arena */}
+          {/* Logo - LG87 Play Arena */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="flex items-center">
-              {/* Logo Icon Placeholder */}
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
-                <span className="text-white font-bold text-lg">LG&T</span>
-              </div>
-              <div className="ml-3">
-                <div className="text-xl font-bold text-gray-800">
-                  <span className="text-red-500">PLAY</span>{' '}
-                  <span className="text-gray-900">ARENA</span>
-                </div>
-                <div className="text-xs text-gray-500 font-medium">Multi-Sport Complex</div>
-              </div>
+              {/* LG87 Logo */}
+              <img 
+                src="/LG-arena-logo.jpg" 
+                alt="LG87 Play Arena" 
+                className="h-20 w-auto transition-transform duration-200 group-hover:scale-105"
+              />
             </div>
           </Link>
 

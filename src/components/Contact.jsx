@@ -88,7 +88,7 @@ const Contact = () => {
             Get In <span className="text-red-500">Touch</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to elevate your game? Contact LG&T Play Arena today. Whether you're booking 
+            Ready to elevate your game? Contact LG87 Play Arena today. Whether you're booking 
             a facility, joining our community, or just have questions, we're here to help.
           </p>
         </div>
@@ -219,7 +219,7 @@ const Contact = () => {
               </h3>
               
               <p className="text-gray-600 mb-6">
-                Stay connected with LG&T Play Arena for updates, events, and behind-the-scenes content.
+                Stay connected with LG87 Play Arena for updates, events, and behind-the-scenes content.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
@@ -357,14 +357,14 @@ const Contact = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="LG&T Play Arena Location"
+                  title="LG87 Play Arena Location"
                   className="rounded-xl"
                 ></iframe>
                 
                 {/* Overlay for custom styling (optional) */}
                 <div className="absolute inset-0 pointer-events-none">
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-md">
-                    <p className="text-sm font-semibold text-gray-800">📍 LG&T Play Arena</p>
+                    <p className="text-sm font-semibold text-gray-800">📍 LG87 Play Arena</p>
                     <p className="text-xs text-gray-600">{contact_info.address.street}</p>
                   </div>
                 </div>
@@ -377,7 +377,7 @@ const Contact = () => {
         <div className="mt-20 text-center bg-gradient-to-br from-red-500 to-red-600 text-white rounded-2xl p-12">
           <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of athletes who call LG&T Play Arena home. Book a tour today 
+            Join thousands of athletes who call LG87 Play Arena home. Book a tour today 
             and see why we're the premier choice for sports excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

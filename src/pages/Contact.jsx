@@ -46,10 +46,10 @@ const Contact = () => {
               Send us your questions and we'll respond within 24 hours
             </p>
             <a 
-              href="mailto:info@lgarena.com" 
+              href="mailto:info@lg87arena.com" 
               className="text-primary-600 hover:text-primary-700 font-medium text-sm"
             >
-              info@lgarena.com
+              info@lg87arena.com
             </a>
           </div>
 

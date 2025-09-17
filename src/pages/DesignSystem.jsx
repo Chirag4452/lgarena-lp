@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 /**
  * Design System Showcase Page
- * Demonstrates all components, utilities, and design tokens in the LG&T Play Arena design system
+ * Demonstrates all components, utilities, and design tokens in the LG87 Play Arena design system
  */
 const DesignSystem = () => {
   const [is_dark_mode, setIsDarkMode] = useState(false);
@@ -22,7 +22,7 @@ const DesignSystem = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-h1 text-neutral-900 mb-6">
-            LG&T Play Arena <span className="text-primary-500">Design System</span>
+            LG87 Play Arena <span className="text-primary-500">Design System</span>
           </h1>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
             Comprehensive design system showcasing components, utilities, and design tokens 
@@ -415,7 +415,7 @@ const DesignSystem = () => {
         {/* Footer */}
         <div className="text-center pt-12 border-t border-neutral-200">
           <p className="text-neutral-600">
-            LG&T Play Arena Design System • Built with React + Tailwind CSS
+            LG87 Play Arena Design System • Built with React + Tailwind CSS
           </p>
         </div>
       </div>

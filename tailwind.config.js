@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // LG&T Play Arena Brand Colors - Energetic Red Palette
+        // LG87 Play Arena Brand Colors - Energetic Red Palette
         primary: {
           25: '#fffbfa',
           50: '#fef2f2',

@@ -1,5 +1,5 @@
 /**
- * About page component for LG&T Play Arena
+ * About page component for LG87 Play Arena
  * Showcases the company's story, mission, and values
  */
 const About = () => {
@@ -207,7 +207,7 @@ const About = () => {
         <div className="text-center bg-gradient-to-br from-red-500 to-red-600 text-white rounded-2xl p-12">
           <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
           <p className="text-xl mb-8 text-red-100">
-            Experience the difference at LG&T Play Arena. Whether you're a seasoned athlete 
+            Experience the difference at LG87 Play Arena. Whether you're a seasoned athlete 
             or just starting your fitness journey, we're here to support your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

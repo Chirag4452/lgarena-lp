@@ -49,7 +49,7 @@ const Hero = () => {
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight">
                 Welcome to{' '}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-red-100">
-                  LG&T Play Arena
+                  LG87 Play Arena
                 </span>
               </h1>
               

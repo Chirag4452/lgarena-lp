@@ -1,8 +1,8 @@
-# LG&T Play Arena Design System
+# LG87 Play Arena Design System
 
 ## Overview
 
-This design system provides a comprehensive set of design tokens, components, and guidelines for building consistent, accessible, and beautiful interfaces for the LG&T Play Arena sports complex website.
+This design system provides a comprehensive set of design tokens, components, and guidelines for building consistent, accessible, and beautiful interfaces for the LG87 Play Arena sports complex website.
 
 ## 🎨 Color Palette
 
@@ -350,4 +350,4 @@ The system automatically adapts colors for dark mode:
 </div>
 ```
 
-This design system ensures consistency, maintainability, and a professional appearance across the entire LG&T Play Arena website while remaining flexible for future enhancements.
+This design system ensures consistency, maintainability, and a professional appearance across the entire LG87 Play Arena website while remaining flexible for future enhancements.

@@ -172,7 +172,7 @@ export const facilities = [
 
 // Contact and location information
 export const contact_info = {
-  name: "LG Arena Multi-Sport Complex",
+  name: "LG87 Play Arena Multi-Sport Complex",
   address: {
     street: "1234 Sports Drive",
     city: "Athletic City",
@@ -181,12 +181,12 @@ export const contact_info = {
     country: "USA"
   },
   phone: "(555) 123-SPORT",
-  email: "info@lgarena.com",
-  website: "www.lgarena.com",
+  email: "info@lg87arena.com",
+  website: "www.lg87arena.com",
   social_media: {
-    facebook: "@LGArena",
-    instagram: "@lg_arena",
-    twitter: "@LGArenaComplex"
+    facebook: "@LG87Arena",
+    instagram: "@lg87_arena",
+    twitter: "@LG87ArenaComplex"
   },
   operating_hours: {
     weekdays: "5:00 AM - 11:00 PM",

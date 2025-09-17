@@ -316,7 +316,7 @@ const MobileDemo = () => {
         {/* Footer */}
         <div className="text-center pt-12 border-t border-neutral-200">
           <p className="text-neutral-600">
-            🏟️ LG&T Play Arena Mobile Demo • Test on different devices for best experience
+            🏟️ LG87 Play Arena Mobile Demo • Test on different devices for best experience
           </p>
         </div>
       </div>
