@@ -18,7 +18,7 @@ const Header = () => {
   ];
 
   // Contact information
-  const phone_number = '(555) 123-SPORT';
+  const phone_number = '+91-9739796255';
 
   /**
    * Check if the current path matches the nav item path

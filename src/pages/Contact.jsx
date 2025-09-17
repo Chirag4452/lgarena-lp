@@ -30,10 +30,10 @@ const Contact = () => {
               Speak directly with our team for immediate assistance
             </p>
             <a 
-              href="tel:(555) 123-SPORT" 
+              href="tel:9739796255" 
               className="text-primary-600 hover:text-primary-700 font-medium text-sm"
             >
-              (555) 123-SPORT
+              +91-9739796255
             </a>
           </div>
 
@@ -46,10 +46,10 @@ const Contact = () => {
               Send us your questions and we'll respond within 24 hours
             </p>
             <a 
-              href="mailto:info@lg87arena.com" 
+              href="mailto:lg87playarenadm@gmail.com" 
               className="text-primary-600 hover:text-primary-700 font-medium text-sm"
             >
-              info@lg87arena.com
+              lg87playarenadm@gmail.com
             </a>
           </div>
 

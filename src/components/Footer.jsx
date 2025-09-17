@@ -34,10 +34,14 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">LG</span>
+                <div className=" flex items-center justify-center">
+                <img 
+                src="/LG-arena-logo.png" 
+                alt="LG87 Play Arena" 
+                className="h-20  w-auto transition-transform duration-200 group-hover:scale-105"
+              />
                 </div>
-                <span className="text-xl font-bold">Arena</span>
+                
               </div>
               
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
@@ -47,33 +51,29 @@ const Footer = () => {
 
               {/* Social Media Links */}
               <div className="flex space-x-3">
+                {/* Facebook */}
                 <a 
-                  href="#" 
+                  href="https://www.facebook.com/@lg87playarena/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
                   className="w-9 h-9 bg-gray-700 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200"
                   aria-label="Facebook"
                 >
-                  📘
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5 fill-white">
+                    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.691V11.01h3.129V8.414c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.765v2.314h3.59l-.467 3.696h-3.123V24h6.116C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z"/>
+                  </svg>
                 </a>
+                {/* Instagram */}
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/lg87playarena/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
                   className="w-9 h-9 bg-gray-700 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200"
                   aria-label="Instagram"
                 >
-                  📷
-                </a>
-                <a 
-                  href="#" 
-                  className="w-9 h-9 bg-gray-700 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200"
-                  aria-label="Twitter"
-                >
-                  🐦
-                </a>
-                <a 
-                  href="#" 
-                  className="w-9 h-9 bg-gray-700 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200"
-                  aria-label="YouTube"
-                >
-                  📺
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5 fill-white">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.263 2.242 1.325 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.325 3.608-.975.975-2.242 1.263-3.608 1.325-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.263-2.242-1.325-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.325-3.608C4.533 2.583 5.8 2.295 7.166 2.233 8.432 2.175 8.812 2.163 12 2.163zm0 1.838c-3.17 0-3.548.012-4.796.07-1.036.047-1.602.22-1.978.396-.497.242-.852.532-1.227.907-.375.375-.665.73-.907 1.227-.176.376-.349.942-.396 1.978-.058 1.248-.07 1.626-.07 4.796s.012 3.548.07 4.796c.047 1.036.22 1.602.396 1.978.242.497.532.852.907 1.227.375.375.73.665 1.227.907.376.176.942.349 1.978.396 1.248.058 1.626.07 4.796.07s3.548-.012 4.796-.07c1.036-.047 1.602-.22 1.978-.396.497-.242.852-.532 1.227-.907.375-.375.665-.73.907-1.227.176-.376.349-.942.396-1.978.058-1.248.07-1.626.07-4.796s-.012-3.548-.07-4.796c-.047-1.036-.22-1.602-.396-1.978-.242-.497-.532-.852-.907-1.227-.375-.375-.73-.665-1.227-.907-.376-.176-.942-.349-1.978-.396-1.248-.058-1.626-.07-4.796-.07zM12 5.838a6.162 6.162 0 1 1 0 12.324 6.162 6.162 0 0 1 0-12.324zm0 10.185a4.023 4.023 0 1 0 0-8.047 4.023 4.023 0 0 0 0 8.047zm6.406-11.845a1.44 1.44 0 1 1 0 2.881 1.44 1.44 0 0 1 0-2.881z"/>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -117,11 +117,8 @@ const Footer = () => {
               <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
               <div className="space-y-3 text-sm">
                 <div>
-                  <h4 className="font-medium text-gray-200 mb-1">Address</h4>
-                  <p className="text-gray-300">
-                    {contact_info.address.street}<br />
-                    {contact_info.address.city}, {contact_info.address.state} {contact_info.address.zip}
-                  </p>
+                  <h4 className="font-medium text-gray-200 mb-1">Name</h4>
+                  <p className="text-gray-300">Sudha Lakshmisha</p>
                 </div>
 
                 <div>
@@ -142,6 +139,14 @@ const Footer = () => {
                   >
                     {contact_info.email}
                   </a>
+                </div>
+
+                <div>
+                  <h4 className="font-medium text-gray-200 mb-1">Address</h4>
+                  <p className="text-gray-300">
+                    {contact_info.address.street}<br />
+                    {contact_info.address.city}, {contact_info.address.state} {contact_info.address.zip}
+                  </p>
                 </div>
 
                 <div>

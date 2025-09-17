@@ -174,14 +174,14 @@ export const facilities = [
 export const contact_info = {
   name: "LG87 Play Arena Multi-Sport Complex",
   address: {
-    street: "1234 Sports Drive",
-    city: "Athletic City",
-    state: "AC",
-    zip: "12345",
-    country: "USA"
+    street: "Gunjur - Nerige Rd, Thippasandra",
+    city: "Bengaluru",
+    state: "Karnataka",
+    zip: "560087",
+    country: "India"
   },
-  phone: "(555) 123-SPORT",
-  email: "info@lg87arena.com",
+  phone: "9739796255",
+  email: "lg87playarenadm@gmail.com",
   website: "www.lg87arena.com",
   social_media: {
     facebook: "@LG87Arena",
