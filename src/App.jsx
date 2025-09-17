@@ -3,8 +3,10 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Facilities from './pages/Facilities.jsx';
+import FacilitiesGrid from './pages/FacilitiesGrid.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
+import ContactPage from './pages/ContactPage.jsx';
 
 /**
  * Main App component with routing structure
@@ -31,6 +33,12 @@ function App() {
             path="/facilities" 
             element={<Facilities />} 
           />
+
+          {/* Facilities Grid Page Route (New Component Showcase) */}
+          <Route 
+            path="/facilities-grid" 
+            element={<FacilitiesGrid />} 
+          />
           
           {/* About Page Route */}
           <Route 
@@ -42,6 +50,12 @@ function App() {
           <Route 
             path="/contact" 
             element={<Contact />} 
+          />
+
+          {/* Enhanced Contact Page Route (New Component Showcase) */}
+          <Route 
+            path="/contact-page" 
+            element={<ContactPage />} 
           />
           
           {/* Catch-all route for 404 Not Found */}
