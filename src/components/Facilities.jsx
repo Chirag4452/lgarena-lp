@@ -164,16 +164,16 @@ const Facilities = () => {
       {/* Modal */}
       {is_modal_open && selected_facility && (
         <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 mobile-backdrop-enter"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-start sm:items-center justify-center mobile-backdrop-enter overflow-y-auto"
           onClick={handleBackdropClick}
         >
-          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-auto mobile-menu-enter md:max-h-[90vh] md:my-8 mobile:max-h-full mobile:h-full mobile:rounded-t-2xl mobile:rounded-b-none mobile:mt-16">
+          <div className="bg-white w-full sm:max-w-4xl sm:rounded-2xl shadow-2xl sm:max-h-[90vh] min-h-full sm:min-h-0 sm:overflow-auto mobile-menu-enter sm:my-8 safe-top safe-bottom">
             {/* Modal Header */}
-            <div className="relative h-80 bg-gradient-to-br from-red-100 to-red-200">
+            <div className="relative h-64 sm:h-80 bg-gradient-to-br from-red-100 to-red-200">
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 w-12 h-12 bg-white/90 active:bg-white rounded-full flex items-center justify-center text-gray-600 active:text-gray-800 transition-colors duration-200 z-10 min-h-[48px] min-w-[48px] shadow-lg"
+                className="absolute top-4 right-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 active:bg-white rounded-full flex items-center justify-center text-gray-600 active:text-gray-800 transition-colors duration-200 z-10 min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px] shadow-lg"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -182,7 +182,7 @@ const Facilities = () => {
 
               {/* Facility Image */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-9xl opacity-20">
+                <div className="text-6xl sm:text-9xl opacity-20">
                   {getSportEmoji(selected_facility.sport)}
                 </div>
               </div>
@@ -190,36 +190,36 @@ const Facilities = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               
               {/* Title Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <span className="text-3xl">{getSportEmoji(selected_facility.sport)}</span>
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8">
+                <div className="flex items-center space-x-3 sm:space-x-4 mb-4">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <span className="text-2xl sm:text-3xl">{getSportEmoji(selected_facility.sport)}</span>
                   </div>
-                  <div>
-                    <h2 className="text-3xl font-bold text-white">{selected_facility.name}</h2>
-                    <p className="text-red-200 capitalize text-lg">{selected_facility.sport} Facility</p>
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-xl sm:text-3xl font-bold text-white truncate">{selected_facility.name}</h2>
+                    <p className="text-red-200 capitalize text-sm sm:text-lg">{selected_facility.sport} Facility</p>
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                    <div className="text-2xl font-bold text-white">{selected_facility.capacity}</div>
-                    <div className="text-red-200 text-sm">Capacity</div>
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
+                    <div className="text-lg sm:text-2xl font-bold text-white">{selected_facility.capacity}</div>
+                    <div className="text-red-200 text-xs sm:text-sm">Capacity</div>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                    <div className="text-2xl font-bold text-white">₹{selected_facility.pricing.hourly}</div>
-                    <div className="text-red-200 text-sm">Per Hour</div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
+                    <div className="text-lg sm:text-2xl font-bold text-white">₹{selected_facility.pricing.hourly}</div>
+                    <div className="text-red-200 text-xs sm:text-sm">Per Hour</div>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                    <div className="text-2xl font-bold text-white">{selected_facility.features.length}</div>
-                    <div className="text-red-200 text-sm">Features</div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
+                    <div className="text-lg sm:text-2xl font-bold text-white">{selected_facility.features.length}</div>
+                    <div className="text-red-200 text-xs sm:text-sm">Features</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Modal Content */}
-            <div className="p-8">
+            <div className="p-4 sm:p-6 lg:p-8">
               {/* Description */}
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">About This Facility</h3>
@@ -286,7 +286,7 @@ const Facilities = () => {
               {/* Pricing */}
               <div className="mb-8">
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Pricing Options</h4>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="text-center p-4 bg-gradient-to-br from-red-50 to-red-100 rounded-xl">
                     <div className="text-2xl font-bold text-red-600">₹{selected_facility.pricing.hourly}</div>
                     <div className="text-red-700 font-medium">Per Hour</div>
@@ -303,11 +303,11 @@ const Facilities = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="flex-1 bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-200">
+              <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 pb-4 sm:pb-0">
+                <button className="flex-1 bg-red-500 active:bg-red-600 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-200 min-h-[48px] text-center">
                   Book This Facility
                 </button>
-                <button className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold py-4 px-6 rounded-lg transition-colors duration-200">
+                <button className="flex-1 bg-gray-100 active:bg-gray-200 text-gray-700 font-bold py-4 px-6 rounded-lg transition-colors duration-200 min-h-[48px] text-center">
                   Schedule Tour
                 </button>
               </div>

@@ -116,6 +116,9 @@
   @media (max-width: 640px) {
     html {
       font-size: 16px; /* Prevent zoom on iOS form inputs */
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
     
     body {
@@ -123,6 +126,7 @@
       -ms-text-size-adjust: 100%;
       text-size-adjust: 100%;
       touch-action: manipulation; /* Improve touch responsiveness */
+      -webkit-tap-highlight-color: rgba(239, 68, 68, 0.2);
     }
     
     /* Prevent horizontal overflow on all elements */
@@ -145,6 +149,10 @@
       min-width: 44px;
       -webkit-tap-highlight-color: rgba(239, 68, 68, 0.2);
       touch-action: manipulation;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
     
     /* Improve form experience on mobile */
@@ -662,6 +670,33 @@
   .mobile-hidden {
     @media (max-width: 639px) {
       display: none !important;
+    }
+  }
+
+  /* Mobile performance improvements */
+  @media (max-width: 640px) {
+    * {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-perspective: 1000px;
+      perspective: 1000px;
+    }
+    
+    /* Optimize animations for mobile */
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-scale-in {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      will-change: transform, opacity;
+    }
+    
+    /* Better modal experience on mobile */
+    .modal-mobile {
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
     }
   }
 

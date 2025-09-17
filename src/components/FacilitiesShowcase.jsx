@@ -41,7 +41,7 @@ const FacilitiesShowcase = () => {
         </div>
 
         {/* Facilities Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8 lg:mb-12">
           {showcase_facilities.map((facility) => (
             <div 
               key={facility.id}
@@ -53,7 +53,7 @@ const FacilitiesShowcase = () => {
               </div>
 
               {/* Facility Content */}
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <h3 className="text-xl font-semibold text-secondary-800 mb-2">
                   {facility.name}
                 </h3>
@@ -99,7 +99,7 @@ const FacilitiesShowcase = () => {
                 </div>
 
                 {/* Action Button */}
-                <button className="w-full btn-primary text-sm py-2">
+                <button className="w-full btn-primary text-sm py-3 min-h-[44px]">
                   Learn More
                 </button>
               </div>

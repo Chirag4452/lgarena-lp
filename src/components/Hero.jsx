@@ -42,44 +42,44 @@ const Hero = () => {
             <div className="space-y-4">
               
               
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 Welcome to{' '}
                 <span className="block text-white">
                   LG87 Play Arena
                 </span>
               </h1>
               
-              <p className="text-xl sm:text-2xl lg:text-3xl font-light text-white/90 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white/90 max-w-4xl mx-auto leading-relaxed">
                 Where champions are made and dreams take flight. Experience world-class facilities 
                 across basketball, tennis, swimming, soccer, fitness, and volleyball.
               </p>
             </div>
 
             {/* Key Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 py-6 md:py-8">
               <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white">6</div>
-                <div className="text-red-200 text-sm font-medium">Sport Facilities</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">6</div>
+                <div className="text-red-200 text-xs sm:text-sm font-medium">Sport Facilities</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white">15+</div>
-                <div className="text-red-200 text-sm font-medium">Years Excellence</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">15+</div>
+                <div className="text-red-200 text-xs sm:text-sm font-medium">Years Excellence</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white">10K+</div>
-                <div className="text-red-200 text-sm font-medium">Active Members</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">10K+</div>
+                <div className="text-red-200 text-xs sm:text-sm font-medium">Active Members</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white">24/7</div>
-                <div className="text-red-200 text-sm font-medium">Support</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">24/7</div>
+                <div className="text-red-200 text-xs sm:text-sm font-medium">Support</div>
               </div>
             </div>
 
             {/* Call to Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto sm:max-w-none">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full max-w-sm sm:max-w-none mx-auto">
               <Link 
                 to="/facilities" 
-                className="group relative bg-red-500 active:bg-red-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg min-h-[52px] w-full sm:w-auto flex items-center justify-center text-base sm:text-lg hover:scale-105 hover:shadow-2xl"
+                className="group relative bg-red-500 active:bg-red-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 shadow-lg min-h-[48px] sm:min-h-[52px] w-full sm:w-auto flex items-center justify-center text-sm sm:text-base lg:text-lg hover:scale-105 hover:shadow-2xl"
               >
                 <span className="relative z-10">View Facilities</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-red-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -87,7 +87,7 @@ const Hero = () => {
               
               <Link 
                 to="/contact" 
-                className="group bg-white/10 active:bg-white/20 backdrop-blur-sm text-white font-bold py-4 px-8 rounded-lg border-2 border-white/30 active:border-white/50 transition-all duration-300 min-h-[52px] w-full sm:w-auto flex items-center justify-center text-base sm:text-lg hover:scale-105 hover:shadow-2xl"
+                className="group bg-white/10 active:bg-white/20 backdrop-blur-sm text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg border-2 border-white/30 active:border-white/50 transition-all duration-300 min-h-[48px] sm:min-h-[52px] w-full sm:w-auto flex items-center justify-center text-sm sm:text-base lg:text-lg hover:scale-105 hover:shadow-2xl"
               >
                 Contact Us
               </Link>

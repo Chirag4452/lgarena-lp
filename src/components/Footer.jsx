@@ -29,28 +29,27 @@ const Footer = () => {
     <footer className="bg-neutral-900 text-white">
       <div className="container-custom">
         {/* Main Footer Content */}
-        <div className="pt-12 pb-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="pt-8 sm:pt-10 lg:pt-12 pb-6 lg:pb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Company Info */}
-            <div className="lg:col-span-1">
+            <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-2 mb-4">
-                <div className=" flex items-center justify-center">
-                <img 
-                src="/LG-arena-logo.png" 
-                alt="LG87 Play Arena" 
-                className="h-20  w-auto transition-transform duration-200 group-hover:scale-105"
-              />
+                <div className="flex items-center justify-center">
+                  <img 
+                    src="/LG-arena-logo.png" 
+                    alt="LG87 Play Arena" 
+                    className="h-16 sm:h-20 w-auto transition-transform duration-200"
+                  />
                 </div>
-                
               </div>
               
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+              <p className="text-gray-300 mb-4 sm:mb-6 text-sm leading-relaxed">
                 Premier multi-sport complex offering world-class facilities for 
                 athletes of all levels. Your fitness journey starts here.
               </p>
 
               {/* Social Media Links */}
-              <div className="flex space-x-3">
+              <div className="flex space-x-3 justify-start sm:justify-start">
                 {/* Facebook */}
                 <a 
                   href="https://www.facebook.com/@lg87playarena/" 
@@ -113,7 +112,7 @@ const Footer = () => {
             </div>
 
             {/* Contact Information */}
-            <div>
+            <div className="sm:col-span-2 lg:col-span-1">
               <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
               <div className="space-y-3 text-sm">
                 <div>
@@ -164,13 +163,13 @@ const Footer = () => {
         
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="border-t border-gray-700 py-4 sm:py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0 text-center sm:text-left">
             <div className="text-gray-300 text-sm">
               © {current_year} {contact_info.name}. All rights reserved.
             </div>
             
-            <div className="flex items-center space-x-6 text-sm">
+            <div className="flex flex-wrap items-center justify-center sm:justify-end gap-4 sm:gap-6 text-sm">
               <Link 
                 to="/privacy" 
                 className="text-gray-300 hover:text-primary-400 transition-colors duration-200"

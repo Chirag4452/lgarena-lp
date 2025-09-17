@@ -94,13 +94,13 @@ const Contact = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           
           {/* Left Column - Contact Information */}
           <div className="space-y-8">
             
             {/* Contact Details */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-red-600">📍</span>
@@ -177,7 +177,7 @@ const Contact = () => {
             </div>
 
             {/* Operating Hours */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-green-600">⏰</span>
@@ -210,7 +210,7 @@ const Contact = () => {
             </div>
 
             {/* Social Media */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-purple-600">🌟</span>
@@ -243,7 +243,7 @@ const Contact = () => {
           <div className="space-y-8">
             
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-blue-600">💬</span>
@@ -264,13 +264,13 @@ const Contact = () => {
                     value={form_data.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+                    className="form-input"
                     placeholder="John Doe"
                   />
                 </div>
 
                 {/* Email and Phone Row */}
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
                       Email Address *
@@ -282,7 +282,7 @@ const Contact = () => {
                       value={form_data.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+                      className="form-input"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -297,7 +297,7 @@ const Contact = () => {
                       name="phone"
                       value={form_data.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+                      className="form-input"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -315,7 +315,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 bg-gray-50 focus:bg-white resize-none"
+                    className="form-textarea"
                     placeholder="Tell us how we can help you..."
                   ></textarea>
                 </div>
@@ -374,17 +374,17 @@ const Contact = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="mt-20 text-center bg-gradient-to-br from-red-500 to-red-600 text-white rounded-2xl p-12">
+        <div className="mt-12 lg:mt-20 text-center bg-gradient-to-br from-red-500 to-red-600 text-white rounded-2xl p-6 sm:p-8 lg:p-12">
           <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             Join thousands of athletes who call LG87 Play Arena home. Book a tour today 
             and see why we're the premier choice for sports excellence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200 transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+            <button className="bg-white text-red-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg active:bg-gray-100 transition-colors duration-200 transform active:scale-95 min-h-[48px]">
               Schedule a Tour
             </button>
-            <button className="bg-red-700 hover:bg-red-800 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-200 border border-red-400 transform hover:scale-105">
+            <button className="bg-red-700 active:bg-red-800 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-200 border border-red-400 transform active:scale-95 min-h-[48px]">
               View Memberships
             </button>
           </div>

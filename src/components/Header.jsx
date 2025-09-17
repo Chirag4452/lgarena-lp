@@ -63,22 +63,22 @@ const Header = () => {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
       <nav className="container-custom">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-18 lg:h-20">
           {/* Logo - LG87 Play Arena */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="flex items-center">
               {/* LG87 Logo */}
               <img 
-                src="/LG-arena-logo.jpg" 
+                src="/LG-arena-logo.png" 
                 alt="LG87 Play Arena" 
-                className="h-20 w-auto transition-transform duration-200 group-hover:scale-105"
+                className="h-14 sm:h-16 lg:h-20 w-auto transition-transform duration-200 group-hover:scale-105"
               />
               {/* Brand Heading */}
-              <div className="ml-3 leading-tight">
-                <div className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+              <div className="ml-2 leading-tight">
+                <div className="text-lg sm:text-xl lg:text-2xl font-extrabold text-gray-900 tracking-tight">
                   LG87 <span className="text-red-600">Play Arena</span>
                 </div>
-                <div className="text-[11px] sm:text-xs text-gray-500 font-medium">
+                <div className="text-[10px] sm:text-[11px] lg:text-xs text-gray-500 font-medium">
                   Multi-Sport Complex
                 </div>
               </div>
