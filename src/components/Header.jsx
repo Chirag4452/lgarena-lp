@@ -174,19 +174,20 @@ const Header = () => {
 
         {/* Mobile Navigation Menu */}
         {is_mobile_menu_open && (
-          <div className="md:hidden animate-in slide-in-from-top-2 duration-200">
+          <div className="md:hidden mobile-menu-enter">
             <div className="bg-white border-t border-gray-200 shadow-lg">
               {/* Mobile Navigation Links */}
-              <div className="px-4 py-4 space-y-2">
-                {nav_items.map((item) => (
+              <div className="px-4 py-4 space-y-3">
+                {nav_items.map((item, index) => (
                   <Link
                     key={item.path}
                     to={item.path}
                     onClick={(e) => handleSmoothScroll(e, item.path)}
-                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                    style={{ animationDelay: `${index * 50}ms` }}
+                    className={`block px-5 py-4 rounded-xl text-base font-medium transition-all duration-200 min-h-[52px] flex items-center animate-slide-up ${
                       isActivePath(item.path)
-                        ? 'text-red-600 bg-red-50 border-l-4 border-red-500'
-                        : 'text-gray-700 hover:text-red-600 hover:bg-gray-50'
+                        ? 'text-red-600 bg-red-50 border-l-4 border-red-500 shadow-sm'
+                        : 'text-gray-700 active:text-red-600 active:bg-gray-50'
                     }`}
                   >
                     {item.name}
@@ -195,12 +196,12 @@ const Header = () => {
               </div>
 
               {/* Mobile Contact Info */}
-              <div className="px-4 py-3 bg-gray-50 border-t border-gray-100">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-medium text-gray-600">Contact Us</span>
+              <div className="px-4 py-4 bg-gray-50 border-t border-gray-100">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-base font-medium text-gray-600">Contact Us</span>
                   <a 
                     href={`tel:${phone_number}`}
-                    className="text-red-500 font-semibold text-sm hover:text-red-600 transition-colors duration-200"
+                    className="text-red-500 font-semibold text-base active:text-red-600 transition-colors duration-200 min-h-[44px] flex items-center px-3 py-2 rounded-lg"
                   >
                     {phone_number}
                   </a>
@@ -209,7 +210,7 @@ const Header = () => {
                 {/* Mobile CTA Button */}
                 <button 
                   onClick={closeMobileMenu}
-                  className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 shadow-md"
+                  className="w-full bg-red-500 active:bg-red-600 text-white font-semibold py-4 px-4 rounded-lg transition-colors duration-200 shadow-md min-h-[48px] text-base"
                 >
                   Book Now
                 </button>

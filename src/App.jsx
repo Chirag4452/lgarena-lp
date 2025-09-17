@@ -8,6 +8,7 @@ import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import DesignSystem from './pages/DesignSystem.jsx';
+import MobileDemo from './pages/MobileDemo.jsx';
 
 /**
  * Main App component with routing structure
@@ -63,6 +64,12 @@ function App() {
           <Route 
             path="/design-system" 
             element={<DesignSystem />} 
+          />
+
+          {/* Mobile Demo Route */}
+          <Route 
+            path="/mobile-demo" 
+            element={<MobileDemo />} 
           />
           
           {/* Catch-all route for 404 Not Found */}

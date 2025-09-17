@@ -164,18 +164,18 @@ const Facilities = () => {
       {/* Modal */}
       {is_modal_open && selected_facility && (
         <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 mobile-backdrop-enter"
           onClick={handleBackdropClick}
         >
-          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-auto">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-auto mobile-menu-enter md:max-h-[90vh] md:my-8 mobile:max-h-full mobile:h-full mobile:rounded-t-2xl mobile:rounded-b-none mobile:mt-16">
             {/* Modal Header */}
             <div className="relative h-80 bg-gradient-to-br from-red-100 to-red-200">
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors duration-200 z-10"
+                className="absolute top-4 right-4 w-12 h-12 bg-white/90 active:bg-white rounded-full flex items-center justify-center text-gray-600 active:text-gray-800 transition-colors duration-200 z-10 min-h-[48px] min-w-[48px] shadow-lg"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>

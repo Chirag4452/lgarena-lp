@@ -80,10 +80,10 @@ const Hero = () => {
             </div>
 
             {/* Call to Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto sm:max-w-none">
               <Link 
                 to="/facilities" 
-                className="group relative bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg"
+                className="group relative bg-red-500 active:bg-red-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg min-h-[52px] w-full sm:w-auto flex items-center justify-center text-base sm:text-lg hover:scale-105 hover:shadow-2xl"
               >
                 <span className="relative z-10">View Facilities</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-red-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -91,7 +91,7 @@ const Hero = () => {
               
               <Link 
                 to="/contact" 
-                className="group bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold py-4 px-8 rounded-lg border-2 border-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                className="group bg-white/10 active:bg-white/20 backdrop-blur-sm text-white font-bold py-4 px-8 rounded-lg border-2 border-white/30 active:border-white/50 transition-all duration-300 min-h-[52px] w-full sm:w-auto flex items-center justify-center text-base sm:text-lg hover:scale-105 hover:shadow-2xl"
               >
                 Contact Us
               </Link>
@@ -101,32 +101,48 @@ const Hero = () => {
       </div>
 
       {/* Operating Hours Card */}
-      <div className="absolute bottom-8 left-8 z-40 hidden md:block">
-        <div className="bg-white/95 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/20 max-w-xs">
-          <div className="flex items-center mb-4">
+      <div className="absolute bottom-8 left-4 md:left-8 z-40 hidden sm:block">
+        <div className="bg-white/95 backdrop-blur-md rounded-xl p-4 md:p-6 shadow-2xl border border-white/20 max-w-xs">
+          <div className="flex items-center mb-3 md:mb-4">
             <div className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-            <h3 className="font-bold text-gray-800">Operating Hours</h3>
+            <h3 className="font-bold text-gray-800 text-sm md:text-base">Operating Hours</h3>
           </div>
           
-          <div className="space-y-2 text-sm text-gray-700">
+          <div className="space-y-2 text-xs md:text-sm text-gray-700">
             <div className="flex justify-between">
               <span className="font-medium">Mon - Fri:</span>
-              <span>5:00 AM - 11:00 PM</span>
+              <span className="text-xs md:text-sm">5:00 AM - 11:00 PM</span>
             </div>
             <div className="flex justify-between">
               <span className="font-medium">Weekends:</span>
-              <span>6:00 AM - 10:00 PM</span>
+              <span className="text-xs md:text-sm">6:00 AM - 10:00 PM</span>
             </div>
             <div className="flex justify-between">
               <span className="font-medium">Holidays:</span>
-              <span>8:00 AM - 8:00 PM</span>
+              <span className="text-xs md:text-sm">8:00 AM - 8:00 PM</span>
             </div>
           </div>
           
-          <div className="mt-4 pt-3 border-t border-gray-200">
+          <div className="mt-3 md:mt-4 pt-2 md:pt-3 border-t border-gray-200">
             <p className="text-xs text-gray-500">
               <span className="font-semibold text-red-600">Open Now</span> • Closes 11:00 PM
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Operating Hours Banner */}
+      <div className="absolute bottom-4 left-4 right-4 z-40 sm:hidden">
+        <div className="bg-white/95 backdrop-blur-md rounded-lg px-4 py-3 shadow-xl border border-white/20">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+              <span className="font-semibold text-gray-800 text-sm">Open Now</span>
+              <span className="text-gray-600 text-xs ml-2">• Closes 11:00 PM</span>
+            </div>
+            <button className="text-red-600 text-xs font-medium active:text-red-700 min-h-[32px] px-3 py-1 rounded-md active:bg-red-50 transition-colors">
+              View Hours
+            </button>
           </div>
         </div>
       </div>
