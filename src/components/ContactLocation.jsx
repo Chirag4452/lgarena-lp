@@ -175,6 +175,26 @@ const ContactLocation = () => {
                     <p className="text-secondary-600">{contact_info.email}</p>
                   </div>
                 </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-primary-600 text-sm">👤</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-secondary-800">Contact Person</h4>
+                    <p className="text-secondary-600">Sudha Lakshmisha</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-primary-600 text-sm">🏢</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-secondary-800">GST Number</h4>
+                    <p className="text-secondary-600">29EHOPS5070P1Z6</p>
+                  </div>
+                </div>
               </div>
             </div>
 
