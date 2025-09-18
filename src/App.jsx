@@ -7,6 +7,9 @@ import FacilitiesGrid from './pages/FacilitiesGrid.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import ContactPage from './pages/ContactPage.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import TermsOfService from './pages/TermsOfService.jsx';
+import Accessibility from './pages/Accessibility.jsx';
 import DesignSystem from './pages/DesignSystem.jsx';
 import MobileDemo from './pages/MobileDemo.jsx';
 
@@ -58,6 +61,24 @@ function App() {
           <Route 
             path="/contact-page" 
             element={<ContactPage />} 
+          />
+
+          {/* Privacy Policy Route */}
+          <Route 
+            path="/privacy" 
+            element={<PrivacyPolicy />} 
+          />
+
+          {/* Terms of Service Route */}
+          <Route 
+            path="/terms" 
+            element={<TermsOfService />} 
+          />
+
+          {/* Accessibility Statement Route */}
+          <Route 
+            path="/accessibility" 
+            element={<Accessibility />} 
           />
 
           {/* Design System Showcase Route */}
