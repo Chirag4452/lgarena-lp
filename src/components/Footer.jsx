@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { contact_info, facilities } from '../data/facilities.js';
+import { contact_info } from '../data/facilities.js';
 
 /**
  * Footer component with site navigation, contact info, and social links
@@ -9,30 +9,14 @@ const Footer = () => {
   // Get current year for copyright
   const current_year = new Date().getFullYear();
 
-  // Quick links for navigation
-  const quick_links = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Facilities', path: '/facilities' },
-    { name: 'Membership', path: '/membership' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Book Now', path: '/booking' }
-  ];
-
-  // Sport categories for quick facility access
-  const sport_categories = facilities.map(facility => ({
-    name: facility.name,
-    path: `/facilities#${facility.sport}`
-  }));
-
   return (
     <footer className="bg-neutral-900 text-white">
       <div className="container-custom">
         {/* Main Footer Content */}
         <div className="pt-8 sm:pt-10 lg:pt-12 pb-6 lg:pb-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Company Info */}
-            <div className="sm:col-span-2 lg:col-span-1">
+            <div className="lg:col-span-1">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="flex items-center justify-center">
                   <img 
@@ -77,42 +61,38 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                {quick_links.map((link) => (
-                  <li key={link.path}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-primary-400 transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* About Us */}
+            <div className="lg:col-span-1">
+              <h3 className="font-semibold text-lg mb-4">About Us</h3>
+              <div className="space-y-3 text-sm">
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  LG87 Play Arena is a state-of-the-art multi-sport facility dedicated to 
+                  promoting fitness, recreation, and community engagement. We provide 
+                  professional-grade equipment and services for athletes and fitness 
+                  enthusiasts of all skill levels.
+                </p>
+                
+                <div>
+                  <h4 className="font-medium text-gray-200 mb-1">GST No.</h4>
+                  <p className="text-gray-300">29EHOPS5070P1Z6</p>
+                </div>
 
-            {/* Facilities */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Our Facilities</h3>
-              <ul className="space-y-2">
-                {sport_categories.map((facility) => (
-                  <li key={facility.path}>
-                    <Link
-                      to={facility.path}
-                      className="text-gray-300 hover:text-primary-400 transition-colors duration-200 text-sm"
-                    >
-                      {facility.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+                <div>
+                  <h4 className="font-medium text-gray-200 mb-1">Business Address</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    SITE NO.207 A<br />
+                    L G LAYOUT<br />
+                    Varthur Main Road<br />
+                    Gunjur, Bengaluru<br />
+                    Bengaluru Urban, Karnataka<br />
+                    PIN Code: 560087
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Contact Information */}
-            <div className="sm:col-span-2 lg:col-span-1">
+            <div className="lg:col-span-1">
               <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
               <div className="space-y-3 text-sm">
                 <div>
